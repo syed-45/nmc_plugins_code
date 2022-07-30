@@ -1,0 +1,108 @@
+<style>
+.popupImage{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+}
+.popupContainer{
+    background-color: rgb(40 39 39 / 86%);
+    border-radius: 10px;
+    /*border: #000000;
+    border-style: double;
+    border-width: thick;*/
+    position: fixed;
+    padding-top: 1%;
+    left: 10%;
+    right: 10%;
+    text-align: center;
+    top: 12%;
+    bottom: 12%;
+    overflow: auto;
+    font-size: 120%;
+    color: white;
+}
+
+body{
+ backdrop-filter: blur(5px);   
+}
+
+
+
+@media only screen and (max-width: 767px) {
+    .popupContainer {
+        /*background-color: lightblue;*/
+        left: 5%;
+        right: 5%;
+        overflow-y: scroll;
+    }
+    .popupImage {
+        width: 65%;
+    }
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #ba0909;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>
+<body>
+    <div class="popupContainer" id="popContainer">
+        <span class="close">&times;</span>
+        <!--<img src="https://files.secure.website/wscfus/10644130/29586052/youthevent-w1080.jpeg" class="popupImage">-->
+        <br>
+        <br>
+        <p><b>  Assalāmu ‘Alaykum Wa    Rahmatullāhi Wa Barakātuh
+            <br>
+            NEWCASTLE MUSLIM CENTRE INVITES YOU ALL TO:
+            <br>
+            🔶‘EĪD UL FITR PRAYER🔶
+            <br>
+            <br>
+            🕘 TIME: 9AM
+            <br>
+            <br>
+            📍LOCATION: NEWCASTLE MUSLIM CENTRE CAR PARK
+            <br>
+            <br>
+            🗓 DATE: Monday 2nd of May
+            <br>
+            <br>            
+            🚺 SISTERS FACILITIES AVAILABLE 
+            <br>
+            <br>
+            (PLEASE BRING YOUR PRAYER MATS WITH YOU)
+            <br>
+            <br>
+            <br>
+            🛑*IMPORTANT NOTICE *🛑
+            <br>
+            If it rains, we will be conducting two congregational prayers inside the Masjid. The first at *8:30am **and the second at *9:45am. 
+        </b></p>
+    </div>
+
+<script>
+popContainer = document.getElementById("popContainer")
+
+// Get the <span> element that closes the popup
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the popup
+span.onclick = function() { 
+  popContainer.style.display = "none";
+}
+
+</script>
+</body>

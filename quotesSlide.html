@@ -1,0 +1,37 @@
+<style>
+.quotes {display: none;}
+</style>
+
+<p class="quotes">The places of worship are ˹only˺ for Allah, so do not invoke anyone besides Him.
+<br>Qur'an 72:18</p>
+
+<p class="quotes">Abu Darda reported: The Messenger of Allah, peace and blessings be upon him, said, “The mosque is the home of every righteous person. Allah Almighty has guaranteed those who have their home in the mosques with the spirit, mercy, and safe passage over the bridge of Hell unto the pleasure of Allah Almighty.” 
+<br>Source: Shu’ab al-Imān 2689<br>
+Grade: Hasan (fair) according to Al-Mundhiri</p>
+
+<p class="quotes">Abu Umamah reported: The Messenger of Allah, peace and blessings be upon him, said, “Whoever leaves his house with ritual purification for a prescribed prayer, his reward will be like one performing a Hajj pilgrimage in a state of sanctity. Whoever leaves to glorify Allah in the forenoon, laboring only for this purpose, his reward will be like one performing the Umrah pilgrimage.”
+<br>Source: Sunan Abī Dāwūd 1288</p>
+
+<p class="quotes">Abu Huraira reported: The Messenger of Allah (ﷺ) said, the most beloved of places to Allah are the mosques, and the most hated of places to Allah are the markets. 
+<br>Muslim</p>
+    
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    (function() {
+
+        var quotes = $(".quotes");
+        var quoteIndex = -1;
+
+        function showNextQuote() {
+            ++quoteIndex;
+            quotes.eq(quoteIndex % quotes.length)
+                .fadeIn(1000)
+                .delay(6000)
+                .fadeOut(1000, showNextQuote);
+        }
+
+        showNextQuote();
+
+    }) ();
+</script>

@@ -1,0 +1,62 @@
+<style>
+
+    .popup-container {
+      position: fixed;
+      bottom: -100%;
+      left: 0;
+      right: 0;
+      background: #2f3640;
+      color: #f5f6fa;
+      text-align: -webkit-center;
+      box-shadow: 0 -2px 16px rgba(47, 54, 64, 0.39);
+      transition: 400ms;
+      padding: 32px 32px;
+    }
+    
+    .popup-container.active {
+      bottom: 50%;
+      
+    }
+    
+    .popup-container a {
+      color: #f5f6fa;
+    }
+    
+    .popup-btn {
+      background: #009aaf;
+      border: 0;
+      color: #f5f6fa;
+      padding: 5px 28px;
+      font-size: 8px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    
+</style>
+<div class="popup-container">
+    
+    <img src="C:\Users\haque\OneDrive\Documents\nmc\family event.jpeg" style="width:15%;">
+    <br>
+    <br>
+    <button class="popup-btn">
+      Okay
+    </button>
+  </div>
+
+<script>
+    const popupContainer = document.querySelector(".popup-container");
+    const popupButton = document.querySelector(".popup-btn");
+
+    popupButton.addEventListener("click", () => {
+    popupContainer.classList.remove("active");
+    
+    });
+
+    setTimeout(() => {
+        popupContainer.classList.add("active");
+    }, 1500);
+
+    //document.getElementById("ftr_pasteDiv_172").style.zIndex="999999";
+</script>
+    

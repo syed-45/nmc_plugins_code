@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.gallery {
+  border: 0px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #333333;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+</head>
+<body>
+
+<h2>Responsive Image Gallery</h2>
+<h4>Resize the browser window to see the effect.</h4>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="img_5terre.jpg">
+      <img src="https://am4pap001files.storage.live.com/y4m6KbrDyBB2yziRgac4XUKhPWle4GVwH4PyMPNiQ814DqOpcspWQ6Hw7V81fNtyY6nh8Jcj_MWnyfZsWLhKQNxsOfsW5iJCIhsVQCW-uU9HJLX-sX9IA9TeJfoWQb7Q4pngquPlek-dYJTgNWmg5BqIIt1k1M1PjXIl61vv-UctOhgFuK0AGp7jZC9mN4uLt8D?width=960&height=665&cropmode=none" alt="Cinque Terre" width="600" height="400">
+    </a>
+    
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="img_forest.jpg">
+      <img src="https://am4pap001files.storage.live.com/y4m7ilc4JfKGi6GT6r0ZI80vw94nISQlIOL1IE1LxPr0rj1KeJHeG8PKwT3fn6hneT3IhxINVItUV31SG-IDM-bIujqA3nI50dOms79m7HapDjkWVRMyOhAshUMLhBWhH0kHX3ROOn2U_nn7hoaov10zTMk7vNHXQFvV103PWc61JbuIz9B_6K0AJsqqSIjowt_?width=1600&height=1200&cropmode=none" alt="Forest" width="600" height="400">
+    </a>
+    
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="img_lights.jpg">
+      <img src="https://am4pap001files.storage.live.com/y4mbMAVhknGG8xn6ymx98B-AHELI5u4j8iVKf6RBAIrjjYWcQBn4RjxNXi8YNHZvc5Bex5iUoVgrSXc3fVtYZ7Eb2WC0w-r50PXw2U33boqCb6j8e90Or8dmHaZYdNe-Y2DuLoQE8DG6z9GtDaBbgGnbX5jp0vUDH2OrvokoNzxLelZnkQ6GOjGMH2mK3e_iDsC?width=1600&height=1200&cropmode=none" alt="Northern Lights" width="600" height="400">
+    </a>
+    
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="img_mountains.jpg">
+      <img src="https://am4pap001files.storage.live.com/y4mdvhC0FRU_HyhCw5ugU_lfcJmtx50AcXecbyQFkzpxo-9omVMEHEObpa-cytBj87lIH0a0odFD1mHIMMXPXd6YIfTwNSCClKyin7BOV_saO9Mn0gVdG2px-GtpfTnNL1SAkErVmX1zc7x2UAueLV8rRrUltKisvQPx4sp59EhrgoX7xR_5RbxSwgmb4q76e0Z?width=1600&height=1200&cropmode=none" alt="Mountains" width="600" height="400">
+    </a>
+    
+  </div>
+</div>
+
+<div class="clearfix"></div>
+
+<div style="padding:6px;">
+  <p>This example use media queries to re-arrange the images on different screen sizes: for screens larger than 700px wide, it will show four images side by side, for screens smaller than 700px, it will show two images side by side. For screens smaller than 500px, the images will stack vertically (100%).</p>
+  <p>You will learn more about media queries and responsive web design later in our CSS Tutorial.</p>
+</div>
+
+</body>
+</html>
