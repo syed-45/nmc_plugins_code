@@ -1879,7 +1879,7 @@ body {
         <td>6:15am</td>
         <td>1:00pm</td>
         <td>3:00pm</td>
-        <td>7:15pm</td>
+        <td>7:45pm</td>
     </tr>
     <tr>
         <td>31</td>
@@ -1924,7 +1924,7 @@ body {
         <td>6:15am</td>
         <td>1:00pm</td>
         <td>3:00pm</td>
-        <td>7:15pm</td>
+        <td>7:45pm</td>
     </tr>
     <tr>
         <td>2</td>
@@ -2361,7 +2361,7 @@ body {
         <td>7:15am</td>
         <td>1:00pm</td>
         <td>2:30pm</td>
-        <td>7:15pm</td>
+        <td>7:45pm</td>
     </tr>
     <tr>
         <td>2</td>
@@ -2792,7 +2792,7 @@ body {
 	let d = new Date();
 	let dayNum = d.getDate();
 	let monthNum = d.getMonth()+1	//since months starts from 0
-	// monthNum = 12; dayNum=1;  //testing 
+	// monthNum = 12; dayNum=11;  //testing 
 	
 	let thisMonthTbl=document.getElementById( monthNum.toString() );
 	
@@ -2818,21 +2818,18 @@ body {
 	} else { //if its not april 
 
 		for (let i=0; i<4; i++) {
-		jamah[i] = thisMonthTbl.rows[dayNum].cells[i+8].innerHTML;	// fajr zuhr asr and isha jamah times
-		
-		for (let j=0; j<dayNum; j++) {		
-			if (jamah[i]==='“') { jamah[i] = thisMonthTbl.rows[dayNum-j].cells[i+8].innerHTML; }
-			else {break;}
-		}
+            jamah[i] = thisMonthTbl.rows[dayNum].cells[i+8].innerHTML;	// fajr zuhr asr and isha jamah times		
+            for (let j=0; j<dayNum; j++) {		
+                if (jamah[i]==='“') { jamah[i] = thisMonthTbl.rows[dayNum-j].cells[i+8].innerHTML; }
+                else {break;}
+            }
 		}
 
-		jamah[4]=jamah[3];
+		jamah[4] = jamah[3];
 		jamah[3] = thisMonthTbl.rows[dayNum].cells[6].innerHTML; 
 		//maghrib jamah to 3rd, isha to 4th in the array
 
-	}
-		
-
+	}		
 	
 	siteTbl.rows[2].cells[1].innerHTML = jamah[0].substring(0, jamah[0].length- 2); 	//fajr jam		//substring to slice am/pm (slice does same(no reason i did it lik this))
 	siteTbl.rows[2].cells[3].innerHTML = jamah[1].substring(0, jamah[1].length- 2); 	//dhuhr jam
