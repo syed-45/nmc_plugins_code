@@ -1,101 +1,100 @@
 <style>
-.popupImage{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 25%;
-}
-.popupContainer{
-    background-color: rgb(40 39 39 / 86%);
-    border-radius: 10px;
-    /*border: #000000;
-    border-style: double;
-    border-width: thick;*/
-    position: fixed;
-    padding-top: 1%;
-    left: 10%;
-    right: 10%;
-    text-align: center;
-    top: 12%;
-    bottom: 12%;
-    overflow: auto;
-    font-size: 120%;
-    color: white;
-}
-
-body{
- backdrop-filter: blur(5px);   
-}
-
-
-
+    #pasteDiv_173 {
+        display: none;
+    }
+    h2 {
+        display: none;
+    }
 @media only screen and (max-width: 767px) {
-    .popupContainer {
-        /*background-color: lightblue;*/
-        left: 5%;
-        right: 5%;
-        overflow-y: scroll;
+        #pasteDiv_173 {
+            display: block;
+        }
+        h2 {
+            display: block;
+        }
     }
     .popupImage {
-        width: 65%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 25%;
     }
-}
-
-.close {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #ba0909;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.close:hover,
-.close:focus {
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
-}
+    .popupContainer {
+        background-color: rgb(40 39 39 / 86%);
+        border-radius: 10px;
+        /*border: #000000;
+border-style: double;
+border-width: thick;*/
+        position: fixed;
+        padding-top: 1%;
+        left: 2%;
+        right: 2%;
+        text-align: center;
+        top: 0%;
+        height: 100%;
+        overflow: auto;
+        font-size: 120%;
+        color: white;
+        backdrop-filter: blur(5px);
+    }
+@media only screen and (max-width: 767px) {
+        .popupContainer {
+            /*background-color: lightblue;*/
+            left: 1%;
+            right: 1%;
+        }
+        .popupImage {
+            width: 65%;
+        }
+    }
+    .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #ba0909;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+    .close:hover,
+    .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+    }
 </style>
-<body>
-    <div class="popupContainer" id="popContainer">
-        <span class="close">&times;</span>
-        <!--<img src="https://files.secure.website/wscfus/10644130/29586052/youthevent-w1080.jpeg" class="popupImage">-->
-        <br>
-        <br>
-        <p>
-        <b>  
-            Assalāmu ‘Alaykum Wa    Rahmatullāhi Wa Barakātuh
+<div class="popupContainer" id="popContainer">
+    <span class="close">×</span>
+    <br>
+    <br>
+    <p>
+        <b>
+            <br>
+            Assalāmu 'Alaykum Wa    Rahmatullāhi Wa Barakātuh
             <br>
             <br>
             <br>
             🌙 Ramadhān has been confirmed to start on Thursday 23rd March 🌙
             <br>
             <br>
-            🔶Taraweeh prayers will commence on Wednesday 22nd March🔶
+            🔶Taraweeh prayers will commence on Wednesday 22nd March insha'allāh🔶
             <br>
             <br>
-            🕘 Isha + Taraweeh TIME: 9:30pm            
+            🕘 Isha + Taraweeh TIME: 9:30pm
             <br>
-            <br>            
-            🚺 SISTERS FACILITIES AVAILABLE 
             <br>
-            <br>           
+            🚺 SISTERS FACILITIES AVAILABLE
+            <br>
+            <br>
         </b>
-        </p>
-    </div>
-
+    </p>
+</div>
 <script>
-popContainer = document.getElementById("popContainer")
 
-// Get the <span> element that closes the popup
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on <span> (x), close the popup
-span.onclick = function() { 
-  popContainer.style.display = "none";
-}
+    popContainer = document.getElementById("popContainer")
+    var span = document.getElementsByClassName("close")[0];
+    span.onclick = function() {
+        popContainer.style.display = "none";
+    }
 
 </script>
-</body>
