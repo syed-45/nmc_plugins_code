@@ -1,51 +1,41 @@
 <style>
-    #pasteDiv_173 {
-        display: none;
-    }
-    h2 {
-        display: none;
-    }
-@media only screen and (max-width: 767px) {
-        #pasteDiv_173 {
-            display: block;
-        }
-        h2 {
-            display: block;
-        }
-    }
-    .popupImage {
+    .popup-image {
         display: block;
         margin-left: auto;
         margin-right: auto;
         width: 25%;
     }
-    .popupContainer {
+    .popup-container {
         background-color: rgb(40 39 39 / 86%);
         border-radius: 10px;
         /*border: #000000;
-border-style: double;
-border-width: thick;*/
+        border-style: double;
+        border-width: thick;*/
         position: fixed;
         padding-top: 1%;
         left: 2%;
         right: 2%;
         text-align: center;
-        top: 0%;
+        top: -110%;
         height: 100%;
         overflow: auto;
         font-size: 120%;
         color: white;
         backdrop-filter: blur(5px);
+        transition: 500ms
     }
-@media only screen and (max-width: 767px) {
-        .popupContainer {
-            /*background-color: lightblue;*/
-            left: 1%;
-            right: 1%;
-        }
-        .popupImage {
-            width: 65%;
-        }
+    .popup-container.active {
+        top: 0%;
+    }
+    @media only screen and (max-width: 767px) {
+            .popup-container {
+                /*background-color: lightblue;*/
+                left: 1%;
+                right: 1%;
+            }
+            .popup-image {
+                width: 65%;
+            }
     }
     .close {
         position: absolute;
@@ -63,7 +53,7 @@ border-width: thick;*/
         cursor: pointer;
     }
 </style>
-<div class="popupContainer" id="popContainer">
+<div class="popup-container" id="popupContainer">
     <span class="close">×</span>
     <br>
     <br>
@@ -91,10 +81,17 @@ border-width: thick;*/
 </div>
 <script>
 
-    popContainer = document.getElementById("popContainer")
+    popupContainer = document.getElementById("popupContainer")
     var span = document.getElementsByClassName("close")[0];
     span.onclick = function() {
-        popContainer.style.display = "none";
+        popupContainer.classList.remove("active")
+        localStorage.setItem("popupViewed", "true");
     }
+
+    setTimeout(() => {
+    if (!localStorage.getItem("popupViewed")) {
+        popupContainer.classList.add("active");
+    }
+    }, 1500);
 
 </script>
